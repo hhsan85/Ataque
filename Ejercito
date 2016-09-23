@@ -1,0 +1,58 @@
+package ejercito;
+import java.util.Random;
+
+/**
+ *
+ */
+public class Personaje {
+    private int puntosVida;
+	private int minAtaque;
+	private int maxAtaque;
+
+	public Personaje(int puntosVida, int minAtaque, int maxAtaque) {
+		this.puntosVida = puntosVida;
+		this.minAtaque = minAtaque;
+		this.maxAtaque = maxAtaque;
+	}
+        
+        
+	public int atacar() {
+		Random r = new Random();
+		return r.nextInt(maxAtaque - minAtaque) + minAtaque;
+	}
+
+	public int recibirAtaque(int ataque) {
+		puntosVida -= ataque;
+
+		return puntosVida;
+	}
+    
+    
+}
+/**
+*
+*/
+public class Ejercito {
+/**
+* @param args the command line arguments
+*/
+public static void main(String[] args) {
+Personaje[] ejercito = new Personaje[5];
+ejercito[0] = new Personaje(10, 2, 4);
+ejercito[1] = new Personaje(13, 3, 5);
+ejercito[2] = new Personaje(12, 3, 5);
+ejercito[3] = new Personaje(14, 4, 5);
+ejercito[4] = new Personaje(9, 2, 4);
+Random random = new Random ();
+int r1 = random.nextInt(5);
+int r2;
+do{
+r2 = random.nextInt(5);
+} while(r1 ==r2);
+boolean peleando = true;
+while(peleando){
+
+}
+}
+}
+}
